@@ -12,6 +12,14 @@
     "mkdirp"
   ],
   "author": "Kevin Purnelle",
+  "email": "kevin.purnelle@gmail.com",
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:AoDev/Filendir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AoDev/Filendir/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "jasmine-node": "^1.14.3",
