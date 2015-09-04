@@ -11,7 +11,7 @@ Filendir exposes an asynchronous and a synchronous write method. It also exposes
 
 
 ### filendir.ws
-### filendir.writeFileSynch
+### filendir.writeFileSync
 
 **Synchronous write **
 
@@ -32,7 +32,7 @@ if (filendir.ws(filename, content)) {
 
 
 ### filendir.wa
-### filendir.writeFileAsynch
+### filendir.writeFileAsync
 
 **Asynchronous write **
 
