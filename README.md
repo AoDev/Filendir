@@ -2,8 +2,9 @@ Filendir
 ========
 Write a file given a full path. Create the directories if necessary.
 
-It is based on mkdirp. (https://www.npmjs.org/package/mkdirp)
+-----------
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 API
 ----
