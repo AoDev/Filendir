@@ -1,6 +1,6 @@
 Filendir
 ========
-Write a file given a full path. Create the directories if necessary.
+Write a file given a full path. Create the missing directories if necessary.
 
 -----------
 
@@ -8,15 +8,25 @@ Write a file given a full path. Create the directories if necessary.
 
 API
 ----
-Filendir exposes an asynchronous and a synchronous write method. It also exposes mkdirp if you need it.
+Filendir exposes an asynchronous and a synchronous write method.
+
+It also exposes `mkdirp to create directories only, if you need it.
 
 
-### filendir.ws
-### filendir.writeFileSync
+### Synchronous write
+* __filendir.ws__ (shorthand)
+* __filendir.writeFileSync__
 
-**Synchronous write **
+Apart from creating the missing directories,
+it has the same behaviour and interface than node `fs.writeFileSync`.
 
-@return: true or false depending on success.
+```javascript
+// signature
+filendir.writeFileSync(filename, data[, options])
+```
+
+[See fs.writeFileSync in Node.js site](https://nodejs.org/api/fs.html#fs_fs_writefilesync_filename_data_options)
+
 
 **Example**
 
@@ -26,16 +36,23 @@ var filendir = require('filendir')
 var filename = path.join('let','s', 'nest','some','directories','myfile.txt')
 var content = 'Hello World'
 
-if (filendir.ws(filename, content)) {
-    console.log('File written!')
-}
+filendir.ws(filename, content)
 ```
 
+### Asynchronous write
+* __filendir.wa__ (shorthand)
+* __filendir.writeFile__
+* filendir.writeFileAsync (deprecated, still there for backward compatibility)
 
-### filendir.wa
-### filendir.writeFileAsync
+Apart from creating the missing directories,
+it has the same behaviour and interface than node `fs.writeFile`.
 
-**Asynchronous write **
+```javascript
+// signature
+filendir.writeFile(filename, data[, options], callback)
+```
+
+[See fs.writeFile in Node.js site](https://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback)
 
 **Example**
 
@@ -46,13 +63,14 @@ var filename = path.join('let','s', 'nest','some','directories','myfile.txt')
 var content = 'Hello World'
 
 filendir.wa(filename, content, function (err) {
-    if (!err) {
-        console.log('File written!')
-    }
+  if (!err) {
+    console.log('File written!')
+  }
 })
 ```
 
-###filendir.mkdirp
-Would have been harder to do this without it.
+### filendir.mkdirp
 
-See https://www.npmjs.org/package/mkdirp 
+Credits to Substack. Would have been harder to do this without it.
+
+See https://www.npmjs.org/package/mkdirp
