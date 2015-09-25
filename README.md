@@ -5,6 +5,7 @@ Write a file given a full path. Create the missing directories if necessary.
 -----------
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Build Status](https://travis-ci.org/AoDev/Filendir.svg)](https://travis-ci.org/AoDev/Filendir)
 
 API
 ----
