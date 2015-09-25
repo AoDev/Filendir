@@ -1,28 +1,31 @@
 {
-  "name": "Filendir",
+  "name": "filendir",
   "version": "0.0.1",
-  "description": "Write a file and create the directories found in its path if needed.",
-  "main": "lib/index.js",
+  "description": "Filendir allows you to write a file and create the directories found in its path if needed.",
+  "main": "lib/filendir.js",
   "scripts": {
-    "test": "jasmine-node test --verbose --captureExceptions --autotest --watch lib/index.js"
+    "test": "mocha lib",
   },
   "keywords": [
     "write",
     "file",
+    "create",
+    "directory",
     "mkdirp"
   ],
   "author": "Kevin Purnelle",
   "email": "kevin.purnelle@gmail.com",
-  "repository" : {
-    "type" : "git",
-    "url" : "git@github.com:AoDev/Filendir.git"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AoDev/Filendir.git"
   },
   "bugs": {
     "url": "https://github.com/AoDev/Filendir/issues"
   },
   "license": "MIT",
   "devDependencies": {
-    "jasmine-node": "^1.14.3",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
     "rimraf": "^2.2.8"
   },
   "dependencies": {
