@@ -43,7 +43,6 @@ filendir.ws(filename, content)
 ### Asynchronous write
 * __filendir.wa__ (shorthand)
 * __filendir.writeFile__
-* filendir.writeFileAsync (deprecated, still there for backward compatibility)
 
 Apart from creating the missing directories,
 it has the same behaviour and interface than node `fs.writeFile`.
