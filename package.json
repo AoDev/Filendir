@@ -5,7 +5,7 @@
   "main": "lib/filendir.js",
   "scripts": {
     "lint": "eslint lib",
-    "test": "mocha lib",
+    "test": "jest",
     "posttest": "npm run lint",
     "tag-release": "standard-version"
   },
@@ -27,23 +27,23 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "chai": "4.1.2",
-    "eslint": "4.18.1",
-    "eslint-config-standard": "11.0.0",
-    "eslint-plugin-import": "2.9.0",
-    "eslint-plugin-node": "6.0.1",
-    "eslint-plugin-promise": "3.6.0",
-    "eslint-plugin-standard": "3.0.1",
-    "mocha": "5.0.1",
-    "rimraf": "2.6.2",
-    "sinon": "4.4.2",
-    "sinon-chai": "2.14.0",
-    "standard-version": "4.3.0"
+    "@types/jest": "25.2.2",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "26.0.1",
+    "eslint": "7.0.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "jest": "26.0.1",
+    "rimraf": "3.0.2",
+    "standard-version": "8.0.0"
   },
   "dependencies": {
-    "mkdirp": "^0.5.0"
+    "mkdirp": "^1.0.4"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   }
 }

@@ -6,13 +6,18 @@ Write a file given a full path. Create the missing directories if necessary.
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 [![Build Status](https://travis-ci.org/AoDev/Filendir.svg)](https://travis-ci.org/AoDev/Filendir)
+![Node.js >= 10](https://img.shields.io/badge/nodejs-%3E%3D%2010-brightgreen)
 
 API
 ----
 Filendir exposes an asynchronous and a synchronous write method.
 
-It also exposes `mkdirp to create directories only, if you need it.
+It also exposes `mkdirp` to create directories only, if you need it.
 
+## filendir versions node support
+
+* 1.x for nodejs __v4__ to __v9__
+* 2.x for nodejs __v10__ to __now__
 
 ### Synchronous write
 * __filendir.ws__ (shorthand)
@@ -21,7 +26,7 @@ It also exposes `mkdirp to create directories only, if you need it.
 Apart from creating the missing directories,
 it has the same behaviour and interface than node `fs.writeFileSync`.
 
-```javascript
+```js
 // signature
 filendir.writeFileSync(filename, data[, options])
 ```
@@ -31,7 +36,7 @@ filendir.writeFileSync(filename, data[, options])
 
 **Example**
 
-```javascript
+```js
 var path = require('path')
 var filendir = require('filendir')
 var filename = path.join('let','s', 'nest','some','directories','myfile.txt')
@@ -47,16 +52,23 @@ filendir.ws(filename, content)
 Apart from creating the missing directories,
 it has the same behaviour and interface than node `fs.writeFile`.
 
-```javascript
-// signature
+__Extra from fs.writefile__: you can use promises
+
+```js
+// callback use
 filendir.writeFile(filename, data[, options], callback)
+```
+
+```js
+// with promise
+await filendir.writeFile(filename, data[, options])
 ```
 
 [See fs.writeFile in Node.js site](https://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback)
 
 **Example**
 
-```javascript
+```js
 var path = require('path')
 var filendir = require('filendir')
 var filename = path.join('let','s', 'nest','some','directories','myfile.txt')
