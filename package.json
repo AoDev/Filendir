@@ -7,7 +7,7 @@
     "lint": "eslint lib",
     "test": "mocha lib",
     "posttest": "npm run lint",
-    "release": "standard-version"
+    "tag-release": "standard-version"
   },
   "keywords": [
     "write",
