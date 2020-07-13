@@ -38,7 +38,7 @@
     "eslint-plugin-standard": "4.0.1",
     "jest": "26.0.1",
     "rimraf": "3.0.2",
-    "standard-version": "8.0.0"
+    "standard-version": "8.0.1"
   },
   "dependencies": {
     "mkdirp": "^1.0.4"
