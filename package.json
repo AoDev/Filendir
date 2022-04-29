@@ -1,6 +1,6 @@
 {
   "name": "filendir",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Filendir allows you to write a file and create the directories found in its path if needed.",
   "main": "lib/filendir.js",
   "scripts": {
